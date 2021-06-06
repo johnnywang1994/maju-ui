@@ -1,0 +1,68 @@
+@use 'sass:math';
+
+@import './variables.scss';
+@import './mixins.scss';
+
+.row {
+  @include flexbox;
+  > * {
+    @include maxsize;
+  }
+  // row-cols-{number}
+  @for $i from 1 through $max-col {
+    &-cols-#{$i} > * {
+      flex: 0 0 auto;
+      width: math.div(100%, $i);
+    }
+  }
+  // row-{number}
+  @for $i from 1 through $max-row {
+    &-#{$i} {
+      @include flexbox;
+      height: math.div(100%, $max-row) * $i;
+    }
+  }
+
+  @each $breakpoint in $breakpoints {
+    $query: nth($breakpoint, 1);
+    @include use-breakpoint($query) {
+      // row-cols-{breakpoint}-{number}
+      @for $i from 1 through $max-col {
+        &-cols-#{$query}-#{$i} > * {
+          flex: 0 0 auto;
+          width: math.div(100%, $i);
+        }
+      }
+      // row-{breakpoint}-{number}
+      @for $i from 1 through $max-row {
+        &-#{$query}-#{$i} {
+          @include flexbox;
+          height: math.div(100%, $max-row) * $i;
+        }
+      }
+    }
+  }
+}
+
+.col {
+  flex: 1 0 0%;
+  // col-{number}
+  @for $i from 1 through $max-col {
+    &-#{$i} {
+      flex: 0 0 auto;
+      width: math.div(100%, $max-col) * $i;
+    }
+  }
+  // col-{breakpoint}-{number}
+  @each $breakpoint in $breakpoints {
+    $query: nth($breakpoint, 1);
+    @include use-breakpoint($query) {
+      @for $i from 1 through $max-col {
+        &-#{$query}-#{$i} {
+          flex: 0 0 auto;
+          width: math.div(100%, $max-col) * $i;
+        }
+      }
+    }
+  }
+}

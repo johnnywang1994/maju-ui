@@ -1,0 +1,59 @@
+@import './functions.scss';
+
+$max-col: 12;
+$max-row: 12;
+
+$breakpoints: (
+  'xs': 0,
+  'sm': 480,
+  'md': 768,
+  'lg': 1024,
+  'xl': 1280,
+  'xxl': 1440
+);
+
+$class-utils: (
+  'order': (
+    'property': 'order',
+    'class': 'order',
+    'values': map-merge(list-map-values($max-col, 1, false), (
+      '0': 0,
+      'first': -1,
+      'last': $max-col,
+    )),
+    'responsive': true
+  ),
+  'width': (
+    'property': 'width',
+    'class': 'w',
+    'values': list-map-values(4, 25, 0%)
+  ),
+  'height': (
+    'property': 'height',
+    'class': 'h',
+    'values': list-map-values(4, 25, 0%)
+  ),
+  'margin': (
+    'property': ('margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left'),
+    'class': ('m', 'mt', 'mr', 'mb', 'ml'),
+    'values': map-merge(list-map-values(5, 4, 0px, false), ('auto': auto)),
+    'responsive': true
+  ),
+  'padding': (
+    'property': ('padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left'),
+    'class': ('p', 'pt', 'pr', 'pb', 'pl'),
+    'values': map-merge(list-map-values(5, 4, 0px, false), ('auto': auto)),
+    'responsive': true
+  ),
+  'display': (
+    'property': 'display',
+    'class': 'd',
+    'values': (none, flex, block, grid, table, inline-block, inline-flex, inline, table-cell, table-row),
+    'responsive': true
+  ),
+  'text-align': (
+    'property': 'text-align',
+    'class': 'text',
+    'values': (center, justify, left, right),
+  ),
+)

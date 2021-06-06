@@ -1,0 +1,29 @@
+@use 'sass:math';
+
+@import './variables.scss';
+@import './mixins.scss';
+
+.ellipsis {
+  &.line-1 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &.multi {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    overflow: hidden;
+    @for $i from 2 to 4 {
+      &.line-#{$i} {
+        -webkit-line-clamp: $i;
+      }
+    }
+  }
+  overflow: hidden;
+}
+
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,24 @@
+@import './variables.scss';
+
+@mixin use-breakpoint($value) {
+  @if $value != nth(map-keys($breakpoints), 1) {
+    @media (min-width: #{map-get($breakpoints, $value)}px) {
+      @content;
+    }
+  }
+}
+
+@mixin maxsize() {
+  width: 100%;
+  max-width: 100%;
+}
+
+@mixin flexbox() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin margin-x-auto {
+  margin-left: auto;
+  margin-right: auto;
+}

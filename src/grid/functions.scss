@@ -1,0 +1,31 @@
+@function empty-map() {
+  @return map-remove((x:x), x);
+}
+
+@function prepend($list, $value) {
+  @return join($value, $list);
+}
+
+@function list-values($len, $step: 1) {
+  $result: ();
+  @for $i from 1 to $len + 1 {
+    $result: append($result, $i * $step);
+  }
+  @return $result;
+}
+
+@function list-map-values($len, $step: 1, $unit: false, $modify-key: true) {
+  $result: empty-map();
+  @for $i from 1 to $len + 1 {
+    $key: $i;
+    $value: $i * $step;
+    @if $modify-key {
+      $key: $key * $step;
+    }
+    @if $unit {
+      $value: $value + $unit;
+    }
+    $result: map-merge($result, ($key: $value));
+  }
+  @return $result;
+}

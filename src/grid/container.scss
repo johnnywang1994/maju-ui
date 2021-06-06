@@ -1,0 +1,26 @@
+@import './variables.scss';
+@import './mixins.scss';
+
+.container {
+  @include maxsize;
+  @include margin-x-auto;
+  @include use-breakpoint('sm') {
+    max-width: 450px;
+  }
+  @include use-breakpoint('md') {
+    max-width: 720px;
+  }
+  @include use-breakpoint('lg') {
+    max-width: 976px;
+  }
+  @include use-breakpoint('xl') {
+    max-width: 1170px;
+  }
+  @include use-breakpoint('xxl') {
+    max-width: 1380px;
+  }
+
+  &.full {
+    max-width: 100%;
+  }
+}
