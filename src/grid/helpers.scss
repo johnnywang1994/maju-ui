@@ -13,7 +13,7 @@
     -webkit-box-orient: vertical;
     -webkit-box-pack: center;
     overflow: hidden;
-    @for $i from 2 to 4 {
+    @for $i from 2 to 6 {
       &.line-#{$i} {
         -webkit-line-clamp: $i;
       }

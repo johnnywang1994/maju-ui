@@ -12,14 +12,22 @@
   <body>
     <div id="app">
       <div class="container">
-        <div class="row row-cols-2">
-          <div class="col order-1 order-md-2">Hello - 1</div>
-          <div class="w-100"></div>
-          <div class="col order-2 order-md-1">Hello - 2</div>
+        <div class="row row-cols-auto">
+          <div class="col">Column 1</div>
+          <div class="col">Column 2</div>
+          <div class="col">Column 3</div>
         </div>
-        <div class="row">
-          Item 1
-          <div class="ml-1 ml-md-1 ml-lg-1">Item 2</div>
+        <div class="text-break-all" style="width: 20rem;">
+          thisisaverylonglonglonglonglongtext thisisanotherlonglonglonglonglongtext
+        </div>
+        <div class="text-upper fw-bold fst-italic">
+          This text go uppercased.
+        </div>
+        <div class="fw-bold fw-sm-normal">
+          This text go bold in Mobile, noraml in PC.
+        </div>
+        <div class="ellipsis multi line-3" style="width: 8rem">
+          This is a text sentence which will be into ...
         </div>
       </div>
     </div>

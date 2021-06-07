@@ -13,47 +13,120 @@ $breakpoints: (
 );
 
 $class-utils: (
+  // order
   'order': (
-    'property': 'order',
-    'class': 'order',
-    'values': map-merge(list-map-values($max-col, 1, false), (
-      '0': 0,
-      'first': -1,
-      'last': $max-col,
+    property: 'order',
+    class: 'order',
+    values: map-merge(list-map-values($max-col, 1, false), (
+      0: 0,
+      first: -1,
+      last: $max-col,
     )),
-    'responsive': true
+    responsive: true
   ),
+  // sizing
   'width': (
-    'property': 'width',
-    'class': 'w',
-    'values': list-map-values(4, 25, 0%)
+    property: 'width',
+    class: 'w',
+    values: list-map-values(4, 25, 0%)
   ),
   'height': (
-    'property': 'height',
-    'class': 'h',
-    'values': list-map-values(4, 25, 0%)
+    property: 'height',
+    class: 'h',
+    values: list-map-values(4, 25, 0%)
   ),
+  'max-width': (
+    property: 'max-width',
+    class: 'mw',
+    values: (100: 100%)
+  ),
+  'max-height': (
+    property: 'max-height',
+    class: 'mh',
+    values: (100: 100%)
+  ),
+  // spacing
   'margin': (
-    'property': ('margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left'),
-    'class': ('m', 'mt', 'mr', 'mb', 'ml'),
-    'values': map-merge(list-map-values(5, 4, 0px, false), ('auto': auto)),
-    'responsive': true
+    property: ('margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left'),
+    class: ('m', 'mt', 'mr', 'mb', 'ml'),
+    values: map-merge(list-map-values(5, 4, 0px, false), (auto: auto)),
+    responsive: true
   ),
   'padding': (
-    'property': ('padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left'),
-    'class': ('p', 'pt', 'pr', 'pb', 'pl'),
-    'values': map-merge(list-map-values(5, 4, 0px, false), ('auto': auto)),
-    'responsive': true
+    property: ('padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left'),
+    class: ('p', 'pt', 'pr', 'pb', 'pl'),
+    values: map-merge(list-map-values(5, 4, 0px, false), (auto: auto)),
+    responsive: true
   ),
+  // display
   'display': (
-    'property': 'display',
-    'class': 'd',
-    'values': (none, flex, block, grid, table, inline-block, inline-flex, inline, table-cell, table-row),
-    'responsive': true
+    property: 'display',
+    class: 'd',
+    values: (none, flex, block, grid, table, inline-block, inline-flex, inline, table-cell, table-row),
+    responsive: true
   ),
+  // float
+  'float': (
+    property: 'float',
+    class: 'float',
+    values: (left, right, none),
+    responsive: true
+  ),
+  // text
   'text-align': (
-    'property': 'text-align',
-    'class': 'text',
-    'values': (center, justify, left, right),
+    property: 'text-align',
+    class: 'text',
+    values: (center, justify, left, right),
+    responsive: true
+  ),
+  'text-decoration': (
+    property: 'text-decoration',
+    class: 'text',
+    values: (
+      over: overline,
+      under: underline,
+      through: line-through
+    ),
+    responsive: false
+  ),
+  'white-space': (
+    property: 'white-space',
+    class: 'text',
+    values: (
+      wrap: normal,
+      nowrap: nowrap,
+    ),
+    responsive: false
+  ),
+  'text-transform': (
+    property: 'text-transform',
+    class: 'text',
+    values: (
+      upper: uppercase,
+      lower: lowercase,
+      capitalize: capitalize
+    ),
+    responsive: false
+  ),
+  'word-break': (
+    property: 'word-break',
+    class: 'text',
+    values: (
+      break-all: break-all,
+      keep: keep-all,
+    ),
+    responsive: false
+  ),
+  'font-weight': (
+    property: 'font-weight',
+    class: 'fw',
+    values: (bold, bolder, normal, light, lighter),
+    responsive: true
+  ),
+  'font-style': (
+    property: 'font-style',
+    class: 'fst',
+    values: (normal, italic),
+    responsive: false
   ),
 )
