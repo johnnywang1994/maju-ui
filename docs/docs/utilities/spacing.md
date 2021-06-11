@@ -2,10 +2,19 @@
 
 - responsive: true
 
+m: stands for `margin`  
+p: stands for `padding`  
+t: `top`  
+r: `right`  
+b: `bottom`  
+l: `left`  
+x: `left, right`  
+y: `top, bottom`
+
 ### format
 `m-{level}`, `p-{level}`
 
-- {level}: `1-5`, each level stands for `4px`.
+- {level}: `1-5` or `auto`, each level stands for `4px`.
 
 ### Example
 ```html
@@ -15,7 +24,20 @@
 ```
 
 ### format
-`m-{breakpoint}-{level}`, `p-{breakpoint}-{level}`
+`m{direction}-{level}`
+
+ - allowed {direction} values:  
+  `t, r, b, l, x, y`
+
+### Example
+```html
+<div class="box mx-auto py-auto">
+  Content
+</div>
+```
+
+### format
+`m{direction}-{breakpoint}-{level}`, `p{direction}-{breakpoint}-{level}`
 
 ### Example
 ```html

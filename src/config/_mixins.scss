@@ -1,0 +1,165 @@
+@mixin generate-class-utils($class-utils) {
+  @each $class-key, $class in $class-utils {
+    $prefix: map-get($class, 'class');
+    $property: map-get($class, 'property');
+    $properties: map-get($class, 'properties');
+    $values: map-get($class, 'values');
+    $responsive: map-get($class, 'responsive');
+  
+    $property-type: type-of($property);
+    $properties-type: type-of($properties);
+    $values-type: type-of($values);
+  
+    // [values]: list
+    @if $values-type == 'list' {
+      @each $i in $values {
+        @if $property-type == 'list' {
+          @each $prop in $property {
+            .#{nth($prefix, index($property, $prop))}-#{$i} {
+              #{$prop}: $i;
+            }
+          }
+        }
+        @else if $properties-type == 'list' {
+          .#{$prefix}-#{$i} {
+            @each $prop in $properties {
+              #{$prop}: $i;
+            }
+          }
+        }
+        @else {
+          .#{$prefix}-#{$i} {
+            #{$property}: $i;
+          }
+        }
+      }
+      @if $responsive {
+        @each $query, $_ in $breakpoints {
+          @include use-breakpoint($query) {
+            @each $i in $values {
+              @if $property-type == 'list' {
+                @each $prop in $property {
+                  .#{nth($prefix, index($property, $prop))}-#{$query}-#{$i} {
+                    #{$prop}: $i;
+                  }
+                }
+              }
+              @else if $properties-type == 'list' {
+                .#{$prefix}-#{$query}-#{$i} {
+                  @each $prop in $properties {
+                    #{$prop}: $i;
+                  }
+                }
+              }
+              @else {
+                .#{$prefix}-#{$query}-#{$i} {
+                  #{$property}: $i;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    // [values]: map
+    @else if $values-type == 'map' {
+      @each $key, $value in $values {
+        @if $property-type == 'list' {
+          @each $prop in $property {
+            .#{nth($prefix, index($property, $prop))}-#{$key} {
+              #{$prop}: $value;
+            }
+          }
+        }
+        @else if $properties-type == 'list' {
+          .#{$prefix}-#{$key} {
+            @each $prop in $properties {
+              #{$prop}: $value;
+            }
+          }
+        }
+        @else {
+          .#{$prefix}-#{$key} {
+            #{$property}: $value;
+          }
+        }
+      }
+      @if $responsive {
+        @each $query, $_ in $breakpoints {
+          @include use-breakpoint($query) {
+            @each $key, $value in $values {
+              @if $property-type == 'list' {
+                @each $prop in $property {
+                  .#{nth($prefix, index($property, $prop))}-#{$query}-#{$key} {
+                    #{$prop}: $value;
+                  }
+                }
+              }
+              @else if $properties-type == 'list' {
+                .#{$prefix}-#{$query}-#{$key} {
+                  @each $prop in $properties {
+                    #{$prop}: $value;
+                  }
+                }
+              }
+              @else {
+                .#{$prefix}-#{$query}-#{$key} {
+                  #{$property}: $value;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // [values]: string
+    @else if $values-type == 'string' {
+      @if $property-type == 'list' {
+        @each $prop in $property {
+          .#{nth($prefix, index($property, $prop))} {
+            #{$prop}: $values;
+          }
+        }
+      }
+      @else if $properties-type == 'list' {
+        .#{$prefix} {
+          @each $prop in $properties {
+            #{$prop}: $values;
+          }
+        }
+      }
+      @else {
+        .#{$prefix} {
+          #{$property}: $values;
+        }
+      }
+      @if $responsive {
+        @each $query, $_ in $breakpoints {
+          @include use-breakpoint($query) {
+            @if $property-type == 'list' {
+              @each $prop in $property {
+                .#{nth($prefix, index($property, $prop))}-#{$query} {
+                  #{$prop}: $values;
+                }
+              }
+            }
+            @else if $properties-type == 'list' {
+              .#{$prefix}-#{$query} {
+                @each $prop in $properties {
+                  #{$prop}: $values;
+                }
+              }
+            }
+            @else {
+              .#{$prefix}-#{$query} {
+                #{$property}: $values;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

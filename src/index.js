@@ -1,1 +1,1 @@
-import './grid/index.scss';
+import './module/index.scss';

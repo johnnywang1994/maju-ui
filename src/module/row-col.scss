@@ -1,8 +1,5 @@
 @use 'sass:math';
 
-@import './variables.scss';
-@import './mixins.scss';
-
 .row {
   @include flexbox;
   > * {

@@ -11,8 +11,14 @@ const config = {
     scss({
       output: './dist/bundle.css',
       outputStyle: isProd ? 'compressed' : 'expanded',
+      prefix: `
+        @import "./src/config/_functions.scss";
+        @import "./src/config/_variables.scss";
+        @import "./src/mixins.scss";
+        @import "./src/config/_mixins.scss";
+      `,
       sass: require('sass'),
-      watch: ['./src/grid'],
+      watch: ['./src'],
     }),
   ],
 };

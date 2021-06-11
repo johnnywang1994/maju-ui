@@ -1,0 +1,6 @@
+@include generate-class-utils($class-utils);
+
+.text-break-word {
+  word-wrap: break-word;
+  word-break: break-word;
+}

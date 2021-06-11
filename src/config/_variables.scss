@@ -1,5 +1,4 @@
-@import './functions.scss';
-
+$variable-prefix: maju-;
 $max-col: 12;
 $max-row: 12;
 
@@ -10,6 +9,13 @@ $breakpoints: (
   'lg': 1024,
   'xl': 1280,
   'xxl': 1440
+);
+
+$aspect-ratios: (
+  '1x1': 100%,
+  '4x3': calc(3 / 4 * 100%),
+  '16x9': calc(9 / 16 * 100%),
+  '21x9': calc(9 / 21 * 100%)
 );
 
 $class-utils: (
@@ -28,12 +34,12 @@ $class-utils: (
   'width': (
     property: 'width',
     class: 'w',
-    values: list-map-values(4, 25, 0%)
+    values: map-merge(list-map-values(4, 25, 0%), (auto: auto))
   ),
   'height': (
     property: 'height',
     class: 'h',
-    values: list-map-values(4, 25, 0%)
+    values: map-merge(list-map-values(4, 25, 0%), (auto: auto))
   ),
   'max-width': (
     property: 'max-width',
@@ -55,6 +61,30 @@ $class-utils: (
   'padding': (
     property: ('padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left'),
     class: ('p', 'pt', 'pr', 'pb', 'pl'),
+    values: map-merge(list-map-values(5, 4, 0px, false), (auto: auto)),
+    responsive: true
+  ),
+  'margin-x': (
+    properties: ('margin-left', 'margin-right'),
+    class: 'mx',
+    values: map-merge(list-map-values(5, 4, 0px, false), (auto: auto)),
+    responsive: true
+  ),
+  'margin-y': (
+    properties: ('margin-top', 'margin-bottom'),
+    class: 'my',
+    values: map-merge(list-map-values(5, 4, 0px, false), (auto: auto)),
+    responsive: true
+  ),
+  'padding-x': (
+    properties: ('padding-left', 'padding-right'),
+    class: 'px',
+    values: map-merge(list-map-values(5, 4, 0px, false), (auto: auto)),
+    responsive: true
+  ),
+  'padding-y': (
+    properties: ('padding-top', 'padding-bottom'),
+    class: 'py',
     values: map-merge(list-map-values(5, 4, 0px, false), (auto: auto)),
     responsive: true
   ),

@@ -1,0 +1,23 @@
+.fullcover {
+  @include fullcover;
+}
+
+.flex-center {
+  @include flex-center;
+}
+
+.align-center {
+  @include align-center;
+}
+
+.clearfix {
+  @include clearfix;
+}
+
+/* force landscape with scrollable */
+@media only screen and (orientation: portrait) {
+  .fix-landscape {
+    transform: rotate(90deg) translateY(-100%);
+    transform-origin: top left;
+  }
+}

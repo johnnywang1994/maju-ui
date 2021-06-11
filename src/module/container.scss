@@ -1,9 +1,6 @@
-@import './variables.scss';
-@import './mixins.scss';
-
 .container {
   @include maxsize;
-  @include margin-x-auto;
+  @include mx-auto;
   @include use-breakpoint('sm') {
     max-width: 450px;
   }
