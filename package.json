@@ -28,5 +28,10 @@
     "rollup-plugin-scss": "^2.6.1",
     "sass": "^1.34.1",
     "vuepress": "^1.5.3"
-  }
+  },
+  "files": [
+    "dist/{css,js}/*.{css,js,map}",
+    "js/{src,dist}/**/*.{js,map}",
+    "scss/**/*.scss"
+  ]
 }
