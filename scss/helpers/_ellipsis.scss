@@ -1,3 +1,5 @@
+@import '../config/variables.scss';
+
 .ellipsis {
   &.line-1 {
     white-space: nowrap;
@@ -7,10 +9,11 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-box-pack: center;
+    -webkit-line-clamp: var(--#{$variable-prefix}ellipsis-line);
     overflow: hidden;
-    @for $i from 2 to 6 {
+    @for $i from 2 to 4 {
       &.line-#{$i} {
-        -webkit-line-clamp: $i;
+        --#{$variable-prefix}ellipsis-line: #{$i};
       }
     }
   }

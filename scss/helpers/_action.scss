@@ -1,0 +1,9 @@
+.active-scale {
+  transition: filter 0.2s, transform 0.2s;
+  &:hover {
+    filter: brightness(1.2);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

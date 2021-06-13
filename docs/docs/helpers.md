@@ -7,8 +7,3 @@ predefined helpers can help you dealing with daily requiredment.
 use `ellipsis` with `line-1` to add `...` when text overflow.
 - format: `ellipsis line-1`
 - [Detail](/docs/helpers/ellipsis)
-
-## Clearfix
-use `clearfix` to close float box
-- format: `clearfix`
-- [Detail](/docs/helpers/clearfix)

@@ -1,3 +1,5 @@
+@import './functions';
+
 $variable-prefix: maju-;
 $max-col: 12;
 $max-row: 12;
@@ -101,6 +103,17 @@ $class-utils: (
     class: 'float',
     values: (left, right, none),
     responsive: true
+  ),
+  // interactions
+  "user-select": (
+    property: user-select,
+    class: user-select,
+    values: (all, auto, none)
+  ),
+  "pointer-events": (
+    property: pointer-events,
+    class: pe,
+    values: (none, auto),
   ),
   // text
   'text-align': (

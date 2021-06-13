@@ -1,3 +1,5 @@
+@import '../config/mixins.scss';
+
 .stretched-link::after {
   @include fullcover;
   z-index: 1;

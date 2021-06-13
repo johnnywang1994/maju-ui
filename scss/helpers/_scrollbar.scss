@@ -1,0 +1,41 @@
+@import '../config/variables.scss';
+
+.scrollbar {
+  // default scrollbar variables
+  --#{$variable-prefix}scrollbar-width: 6px;
+  --#{$variable-prefix}scrollbar-thumb: #cacaca;
+  --#{$variable-prefix}scrollbar-radius: 10px;
+  --#{$variable-prefix}scrollbar-bg: transparent;
+
+  &.vertical {
+    &::-webkit-scrollbar {
+      width: var(--#{$variable-prefix}scrollbar-width);
+    }
+    &::-webkit-scrollbar-thumb:vertical {
+      background-color: var(--#{$variable-prefix}scrollbar-thumb);
+      border-radius: var(--#{$variable-prefix}scrollbar-radius);
+    }
+  }
+  
+  &.horizontal {
+    &::-webkit-scrollbar {
+      height: var(--#{$variable-prefix}scrollbar-width);
+    }
+    &::-webkit-scrollbar-thumb:horizontal {
+      background-color: var(--#{$variable-prefix}scrollbar-thumb);
+      border-radius: var(--#{$variable-prefix}scrollbar-radius);
+    }
+  }
+  
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 1rem var(--#{$variable-prefix}scrollbar-bg);
+  }
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+}

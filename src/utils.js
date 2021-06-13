@@ -1,1 +1,0 @@
-import './module/class-utils.scss';

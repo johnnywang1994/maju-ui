@@ -1,3 +1,5 @@
+@import '../config/mixins.scss';
+
 .container {
   @include maxsize;
   @include mx-auto;

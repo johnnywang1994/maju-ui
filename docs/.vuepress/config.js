@@ -71,6 +71,7 @@ module.exports = {
             'utilities/spacing.md',
             'utilities/sizing.md',
             'utilities/text.md',
+            'utilities/interactions.md',
             'utilities/float.md',
           ]
         },
@@ -79,7 +80,11 @@ module.exports = {
           collapsable: true,
           children: [
             'helpers/ellipsis.md',
-            'helpers/clearfix.md',
+            'helpers/action.md',
+            'helpers/layout.md',
+            'helpers/ratio.md',
+            'helpers/scrollbar.md',
+            'helpers/stretched-link.md',
           ]
         },
       ],

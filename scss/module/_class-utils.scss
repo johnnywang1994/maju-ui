@@ -1,3 +1,6 @@
+@import '../config/variables.scss';
+@import '../config/mixins.scss';
+
 @include generate-class-utils($class-utils);
 
 .text-break-word {

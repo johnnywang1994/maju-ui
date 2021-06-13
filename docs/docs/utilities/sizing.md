@@ -8,7 +8,7 @@
 `w-{percent}`, `h-{percent}`
 
 - allowed {percent} value:  
-`25, 50, 75, 100`
+`25, 50, 75, 100, auto`
 
 ### Example
 ```html
