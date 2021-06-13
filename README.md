@@ -2,6 +2,8 @@
 
 A tiny responsive UI library for creating rwd web page with tiny grid system.
 
+> This plugin is maily reproduced from Bootstrap scss for practicing purpose and personal usage.
+
 
 ## Usage
 
@@ -12,10 +14,10 @@ Easily import the library by cdn or as ES module.
 ```
 
 ```js
-import 'maju-ui/dist/maju-ui.min.css';
+import 'maju-ui'; // this will import the css file from dist folder
 ```
 
 ## Documentation
 
-You can reference to [Docs Here](http://localhost:8080/)
+You can reference to [Docs Here](https://johnnywang1994.github.io/maju-ui)
 
