@@ -32,7 +32,7 @@ prevents interactions with a pointer (mouse, stylus, touch)
 
 ### Example
 ```html
-<div class="user-select-none">
+<div class="pe-none">
   Content cannot triggered point events.
 </div>
 ```

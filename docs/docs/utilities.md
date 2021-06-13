@@ -40,6 +40,14 @@ including `text-align`, `text-decoration`, `white-space`, `word-break`, `text-tr
 - [Detail](/docs/utilities/text)
 
 
+## Interactions
+including `user-select`, `pointer-events`
+
+- format: `user-select-{type}`, `pointer-events-{type}`
+- responsive: false
+- [Detail](/docs/utilities/interactions)
+
+
 ## Float
 use `float-{align}` to define the float align.
 

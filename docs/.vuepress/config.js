@@ -55,7 +55,7 @@ module.exports = {
           ]
         },
         {
-          title: 'Layout',
+          title: 'Grid',
           collapsable: true,
           children: [
             'container.md',
@@ -80,11 +80,11 @@ module.exports = {
           collapsable: true,
           children: [
             'helpers/ellipsis.md',
-            'helpers/action.md',
             'helpers/layout.md',
             'helpers/ratio.md',
             'helpers/scrollbar.md',
             'helpers/stretched-link.md',
+            'helpers/action.md',
           ]
         },
       ],
