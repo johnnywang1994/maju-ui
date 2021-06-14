@@ -2,8 +2,8 @@
   "name": "maju-ui",
   "author": "johnnywang",
   "version": "1.0.0",
-  "main": "./src/index.js",
-  "module": "./src/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "license": "MIT",
   "scripts": {
     "css:dev": "sass --style=expanded --no-source-map --watch scss/:dist/css/",
