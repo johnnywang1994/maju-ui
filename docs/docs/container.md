@@ -4,9 +4,13 @@ A container is a responsive block element used with breakpoints.
 
 ## Example
 
+<div class="container" style="border: 1px solid">
+  <p class="text-center">Text Content</p>
+</div>
+
 ```html
 <div class="container">
-  <p>Text Content</p>
+  <p class="text-center">Text Content</p>
 </div>
 ```
 

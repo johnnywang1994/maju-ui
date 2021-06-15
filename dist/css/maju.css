@@ -4891,10 +4891,6 @@
   font-weight: normal;
 }
 
-.fw-light {
-  font-weight: light;
-}
-
 .fw-lighter {
   font-weight: lighter;
 }
@@ -4910,10 +4906,6 @@
 
   .fw-xs-normal {
     font-weight: normal;
-  }
-
-  .fw-xs-light {
-    font-weight: light;
   }
 
   .fw-xs-lighter {
@@ -4933,10 +4925,6 @@
     font-weight: normal;
   }
 
-  .fw-sm-light {
-    font-weight: light;
-  }
-
   .fw-sm-lighter {
     font-weight: lighter;
   }
@@ -4952,10 +4940,6 @@
 
   .fw-md-normal {
     font-weight: normal;
-  }
-
-  .fw-md-light {
-    font-weight: light;
   }
 
   .fw-md-lighter {
@@ -4975,10 +4959,6 @@
     font-weight: normal;
   }
 
-  .fw-lg-light {
-    font-weight: light;
-  }
-
   .fw-lg-lighter {
     font-weight: lighter;
   }
@@ -4996,10 +4976,6 @@
     font-weight: normal;
   }
 
-  .fw-xl-light {
-    font-weight: light;
-  }
-
   .fw-xl-lighter {
     font-weight: lighter;
   }
@@ -5015,10 +4991,6 @@
 
   .fw-xxl-normal {
     font-weight: normal;
-  }
-
-  .fw-xxl-light {
-    font-weight: light;
   }
 
   .fw-xxl-lighter {

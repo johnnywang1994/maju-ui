@@ -2,6 +2,17 @@
 
 layout helpers includes many useful layout tools.
 
+<style>
+.layout-wrap-demo {
+  border: 1px solid;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.layout-wrap-demo .overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+</style>
 
 ## Fullcover
 an alias with following css settings, useful when creating popup or something that covers the whole space within its parent element.
@@ -19,9 +30,16 @@ an alias with following css settings, useful when creating popup or something th
 ```
 
 ### Example
-```html
-<div class="container">
+
+<div class="container layout-wrap-demo" style="position: relative;height: 60px;">
   <div class="overlay fullcover"></div>
+  Some contents here
+</div>
+
+```html
+<div class="container" style="position: relative;height: 60px;">
+  <div class="overlay fullcover"></div>
+  Some contents here
 </div>
 ```
 
@@ -40,9 +58,14 @@ an alias for using flexbox to center child
 ```
 
 ### Example
+
+<div class="flex-center layout-wrap-demo" style="height: 100px;">
+  <span>Flex in center</span>
+</div>
+
 ```html
 <div class="flex-center">
-  <span>Text in center</span>
+  <span>Flex in center</span>
 </div>
 ```
 
@@ -64,9 +87,14 @@ an alias for using transform center within parent
 ```
 
 ### Example
+
+<div class="container layout-wrap-demo" style="position: relative; width: 100%; height: 100px;">
+  <span class="align-center">Align in center</span>
+</div>
+
 ```html
-<div style="position: relative; width: 100%; height: 200px;">
-  <span class="align-center">Text in center</span>
+<div style="position: relative; width: 100%; height: 100px;">
+  <span class="align-center">Align in center</span>
 </div>
 ```
 
@@ -77,10 +105,27 @@ clearfix will helps you close the float box correctly.
 `clearfix`
 
 ### Example
+
+ - without `clearfix`
+<div class="container layout-wrap-demo">
+  <div class="float-right">Float to right</div>
+  <div class="float-left">Float to left</div>
+</div>
+<font color="red">Something outside</font>
+
+ - with `clearfix`
+<div class="container clearfix layout-wrap-demo">
+  <div class="float-right">Float to right</div>
+  <div class="float-left">Float to left</div>
+</div>
+<font color="red">Something outside</font>
+
 ```html
 <div class="clearfix">
-  Here is your float content
+  <div class="float-right">Float to right</div>
+  <div class="float-left">Float to left</div>
 </div>
+<font color="red">Something outside</font>
 ```
 
 
@@ -90,7 +135,7 @@ this class can make the item keep landscape even when screen is in portrait.
 useful to make the whole `html` element keep in landscape.
 
 ### format
-`clearfix`
+`fix-landscape`
 ```css
 @media only screen and (orientation: portrait) {
   .fix-landscape {
@@ -120,6 +165,17 @@ to make an element not `display: none` but unvisible and without space
 `visually-hidden`
 
 ### Example
+
+<div class="container layout-wrap-demo">
+  <p>Name: <input /></p>
+  <p>Age: <input /></p>
+  <p>Invisible: <input class="visually-hidden" /></p>
+</div>
+
 ```html
-<h2 class="visually-hidden">Title for screen readers</h2>
+<div class="container layout-wrap-demo">
+  <p>Name: <input /></p>
+  <p>Age: <input /></p>
+  <p>Invisible: <input class="visually-hidden" /></p>
+</div>
 ```

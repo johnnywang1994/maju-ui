@@ -11,6 +11,19 @@ use the pseudo elements to make an element maintain the aspect ratio, useful for
 `1x1 4x3 16x9 21x9`
 
 ### Example
+
+<!-- container -->
+<div style="width: 80%;max-width: 500px;margin: auto">
+  <!-- wrap aspect ratio item -->
+  <div class="ratio ratio-16x9">
+    <!-- target item -->
+    <iframe
+      src="https://www.youtube.com/embed/qZXt1Aom3Cs"
+      frameborder="0"
+    ></iframe>
+  </div>
+</div>
+
 ```html
 <!-- container -->
 <div style="width: 80%;max-width: 500px;margin: auto">

@@ -1,5 +1,13 @@
 # Interactions
 
+<style>
+.action-wrap-demo {
+  border: 1px solid;
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+</style>
+
 ## user-select
 - responsive: false
 
@@ -12,6 +20,11 @@ change the content select status interacts with user.
 `none, auto, all`
 
 ### Example
+
+<div class="user-select-none action-wrap-demo">
+  Content cannot be selected
+</div>
+
 ```html
 <div class="user-select-none">
   Content cannot be selected
