@@ -3,31 +3,6 @@
 @import '../config/variables.scss';
 @import '../config/mixins.scss';
 
-.row {
-  @include flexbox;
-  > * {
-    @include maxsize;
-  }
-  // row-{number}
-  @for $i from 1 through $max-row {
-    &-#{$i} {
-      @include flexbox;
-      height: math.div(100%, $max-row) * $i;
-    }
-  }
-  // row-{breakpoint}-{number}
-  @each $breakpoint in $breakpoints {
-    $query: nth($breakpoint, 1);
-    @include use-breakpoint($query) {
-      @for $i from 1 through $max-row {
-        &-#{$query}-#{$i} {
-          @include flexbox;
-          height: math.div(100%, $max-row) * $i;
-        }
-      }
-    }
-  }
-}
 
 .col {
   flex: 1 0 0%;
@@ -46,6 +21,30 @@
         &-#{$query}-#{$i} {
           flex: 0 0 auto;
           width: math.div(100%, $max-col) * $i;
+        }
+      }
+    }
+  }
+}
+
+.row {
+  @include flexbox;
+  > * {
+    @include maxsize;
+  }
+  // row-h-{number}
+  @for $i from 1 through $max-row {
+    &-h-#{$i} {
+      height: math.div(100%, $max-row) * $i;
+    }
+  }
+  // row-h-{breakpoint}-{number}
+  @each $breakpoint in $breakpoints {
+    $query: nth($breakpoint, 1);
+    @include use-breakpoint($query) {
+      @for $i from 1 through $max-row {
+        &-h-#{$query}-#{$i} {
+          height: math.div(100%, $max-row) * $i;
         }
       }
     }

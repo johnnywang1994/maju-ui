@@ -7,14 +7,14 @@ utility classes for layout adjusting.
 use `order-{number}` or `order-first`, `order-last` to specify the flex item order
 - format: `order-{number}`, `order-first`, `order-last`
 - responsive: true
-- [Detail](/docs/utilities/order)
+- [Detail](./utilities/order)
 
 
 ## Display
 use `d-{state}` to specify the display property.
 - format: `d-{state}`
 - responsive: true
-- [Detail](/docs/utilities/display)
+- [Detail](./utilities/display)
 
 
 ## Spacing
@@ -22,7 +22,7 @@ spacing including `margin`, `padding`, both use the same format.
 
 - format: `m-{level}`, `p-{level}`
 - responsive: true
-- [Detail](/docs/utilities/spacing)
+- [Detail](./utilities/spacing)
 
 
 ## Sizing
@@ -30,14 +30,14 @@ sizing including `width`, `height`, `max-width`, `max-height`
 
 - format: `w-{percent}`, `h-{percent}`, `mw-100`, `mh-100`
 - responsive: false
-- [Detail](/docs/utilities/sizing)
+- [Detail](./utilities/sizing)
 
 
 ## Text
 including `text-align`, `text-decoration`, `white-space`, `word-break`, `text-transform`, `font-weight`, `font-style`
 
 - format: `text-{type}`, `fw-{state}`, `fst-{state}`
-- [Detail](/docs/utilities/text)
+- [Detail](./utilities/text)
 
 
 ## Interactions
@@ -45,7 +45,7 @@ including `user-select`, `pointer-events`
 
 - format: `user-select-{type}`, `pointer-events-{type}`
 - responsive: false
-- [Detail](/docs/utilities/interactions)
+- [Detail](./utilities/interactions)
 
 
 ## Float
@@ -53,4 +53,4 @@ use `float-{align}` to define the float align.
 
 - format: `float-{align}`
 - responsive: true
-- [Detail](/docs/utilities/float)
+- [Detail](./utilities/float)

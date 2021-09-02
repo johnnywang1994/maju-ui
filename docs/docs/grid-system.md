@@ -51,12 +51,12 @@ use class `col` inside `row`, each column inside `row` will auto scale to fit ea
 </div>
 ```
 
-or you can specify the grid space number for both `row` and `col`
+or you can specify the grid space number for both `row-h` and `col`
 
 ### format
-`col-{number}`, `row-{number}`
+`col-{number}`, `row-h-{number}`
 
-1. `row-12` means `height: 100%;`
+1. `row-h-12` means `height: 100%;`
 2. `col-12` means `width: 100%;`
 
 
@@ -99,7 +99,7 @@ there are 6 breakpoints in Maju UI. which are same with Bootstrap 5.x:
 you can use each breakpoint with both `col` and `row` as following:
 
 ### format
-`col-{breakpoint}-{number}`, `row-{breakpoint}-{number}`
+`col-{breakpoint}-{number}`, `row-h-{breakpoint}-{number}`
 
 
 ### Example
@@ -107,8 +107,8 @@ you can use each breakpoint with both `col` and `row` as following:
 <div class="container container-demo-3">
   <div class="row">
     <div class="col-12 col-sm-6" style="height: 200px">
-      <div class="row-6">Column 1-1</div>
-      <div class="row-6">Column 1-2</div>
+      <div class="row-h-6">Column 1-1</div>
+      <div class="row-h-6">Column 1-2</div>
     </div>
     <div class="col-12 col-sm-6">
       Column 2
@@ -120,8 +120,8 @@ you can use each breakpoint with both `col` and `row` as following:
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-6" style="height: 200px">
-      <div class="row-6">Column 1-1</div>
-      <div class="row-6">Column 1-2</div>
+      <div class="row-h-6">Column 1-1</div>
+      <div class="row-h-6">Column 1-2</div>
     </div>
     <div class="col-12 col-sm-6">
       Column 2 with be 12 in under "sm" size
