@@ -10,7 +10,7 @@ A tiny responsive UI library for creating rwd web page with tiny grid system.
 Easily import the library by cdn or as ES module.
 
 ```html
-<link rel="stylesheet" href="path/to/maju-ui.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maju-ui@latest/dist/css/maju.min.css" />
 ```
 
 ```js

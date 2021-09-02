@@ -8,7 +8,7 @@ This is an tiny UI library which mainly with grid system inspired by Bootstrap U
 1. CDN
 
 ```js
-<link rel="stylesheet" href="path/to/maju-ui.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maju-ui@latest/dist/css/maju.min.css" />
 ```
 
 2. ES module
