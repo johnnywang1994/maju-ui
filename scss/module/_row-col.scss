@@ -16,8 +16,7 @@
     }
   }
   // row-h-{breakpoint}-{number}
-  @each $breakpoint in $breakpoints {
-    $query: nth($breakpoint, 1);
+  @each $query, $_ in $breakpoints {
     @include use-breakpoint($query) {
       @for $i from 1 through $max-row {
         &-h-#{$query}-#{$i} {
@@ -38,8 +37,7 @@
     }
   }
   // col-{breakpoint}-{number}
-  @each $breakpoint in $breakpoints {
-    $query: nth($breakpoint, 1);
+  @each $query, $_ in $breakpoints {
     @include use-breakpoint($query) {
       @for $i from 1 through $max-col {
         &-#{$query}-#{$i} {
@@ -64,8 +62,7 @@
 }
 
 // row-cols-{breakpoint}-{number}
-@each $breakpoint in $breakpoints {
-  $query: nth($breakpoint, 1);
+@each $query, $_ in $breakpoints {
   @include use-breakpoint($query) {
     .row-cols-#{$query}-auto > * {
       flex: 0 0 auto;

@@ -7,11 +7,6 @@
       @content;
     }
   }
-  @else {
-    @media (min-width: $value) {
-      @content;
-    }
-  }
 }
 
 @mixin fullcover {

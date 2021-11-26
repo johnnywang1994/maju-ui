@@ -89,7 +89,6 @@ or you can specify the grid space number for both `row-h` and `col`
 ## Work with Breakpoints
 there are 6 breakpoints in Maju UI. which are same with Bootstrap 5.x:
 
-- Extra small (xs)
 - Small (sm)
 - Medium (md)
 - Large (lg)
