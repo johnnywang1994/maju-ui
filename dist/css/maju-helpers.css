@@ -58,6 +58,34 @@
   visibility: hidden;
 }
 
+.safe-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vmin;
+}
+
+.full-breakout {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.photofix {
+  position: relative;
+  overflow: hidden;
+}
+.photofix > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 /* force landscape with scrollable */
 @media only screen and (orientation: portrait) {
   .fix-landscape {
@@ -133,15 +161,15 @@
 }
 
 .ratio-4x3 {
-  --maju-aspect-ratio: calc(3 / 4 * 100%);
+  --maju-aspect-ratio: 75%;
 }
 
 .ratio-16x9 {
-  --maju-aspect-ratio: calc(9 / 16 * 100%);
+  --maju-aspect-ratio: 56.25%;
 }
 
 .ratio-21x9 {
-  --maju-aspect-ratio: calc(9 / 21 * 100%);
+  --maju-aspect-ratio: 42.8571428571%;
 }
 
 .stretched-link::after {

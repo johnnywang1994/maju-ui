@@ -20,7 +20,7 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/maju-ui@latest/dist/css/maju.min.css' }],
+    // ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/maju-ui@latest/dist/css/maju.min.css' }],
   ],
 
   /**
@@ -53,6 +53,7 @@ module.exports = {
             '',
             'utilities.md',
             'helpers.md',
+            'effects.md'
           ]
         },
         {
@@ -86,6 +87,13 @@ module.exports = {
             'helpers/scrollbar.md',
             'helpers/stretched-link.md',
             'helpers/action.md',
+          ]
+        },
+        {
+          title: 'Effects',
+          collapsable: true,
+          children: [
+            'effects/text-gradient.md',
           ]
         },
       ],

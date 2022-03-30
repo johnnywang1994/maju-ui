@@ -1,0 +1,12 @@
+@import '../config/variables.scss';
+
+.text-gradient {
+  color: transparent;
+  background-image: linear-gradient(var(--#{$variable-prefix}text-gradient));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  &.demo {
+    --#{$variable-prefix}text-gradient: to bottom, lightblue, pink;
+  }
+}

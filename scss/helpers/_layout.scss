@@ -16,6 +16,18 @@
   @include clearfix;
 }
 
+.safe-modal {
+  @include safe-modal;
+}
+
+.full-breakout {
+  @include full-breakout;
+}
+
+.photofix {
+  @include photofix;
+}
+
 /* force landscape with scrollable */
 @media only screen and (orientation: portrait) {
   .fix-landscape {

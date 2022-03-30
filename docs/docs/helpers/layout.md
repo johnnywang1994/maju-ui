@@ -12,6 +12,21 @@ layout helpers includes many useful layout tools.
 .layout-wrap-demo .overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+.layout-demo-modal-wrapper {
+  position: relative;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.layout-demo-modal-inner {
+  background: #fff;
+}
+
+.layout-demo-modal-inner > img {
+  display: block;
+  margin: auto;
+}
 </style>
 
 ## Fullcover
@@ -126,6 +141,77 @@ clearfix will helps you close the float box correctly.
   <div class="float-left">Float to left</div>
 </div>
 <font color="red">Something outside</font>
+```
+
+
+## Safe Modal
+By adding `safe-modal` class, it scales the size of your modal with `vmin` units. So it would never break out!!
+
+### format
+`safe-modal`
+
+### Example
+
+<div class="container layout-wrap-demo">
+  <div class="layout-demo-modal-wrapper">
+    <div class="layout-demo-modal-inner safe-modal">
+      <img src="https://fakeimg.pl/400x300/" />
+    </div>
+  </div>
+</div>
+
+```html
+<div class="modal-wrapper">
+  <div class="safe-modal">
+    <img src="https://fakeimg.pl/400x300/" />
+  </div>
+</div>
+```
+
+
+## Full Breakout
+No Matter where the block or image is, this class let them become full page width without the limit to its parent element.
+
+### format
+`full-breakout`
+
+### Example
+
+<div class="container layout-wrap-demo">
+  Below block is insane...
+  <div class="full-breakout" style="height: 100px;background: pink"></div>
+</div>
+
+```html
+<div class="container">
+  Below block is insane...
+  <div class="full-breakout" style="height: 100px;background: pink"></div>
+</div>
+```
+
+
+## Photofix
+use `photofix` to scale img automatically
+
+### format
+`photofix`
+
+### Example
+
+<div class="container layout-wrap-demo">
+  Below image will always cover into 300x300
+  <div class="photofix" style="width: 300px;height: 300px;margin: auto">
+    <img src="https://fakeimg.pl/500x300/" />
+  </div>
+</div>
+
+```html
+<div class="container">
+  Below image will always cover into 300x300
+  <div class="photofix" style="width: 300px;height: 300px">
+    <img src="https://fakeimg.pl/500x300/" />
+  </div>
+</div>
 ```
 
 

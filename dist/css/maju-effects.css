@@ -1,0 +1,10 @@
+.text-gradient {
+  color: transparent;
+  background-image: linear-gradient(var(--maju-text-gradient));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient.demo {
+  --maju-text-gradient: to bottom, lightblue, pink;
+}

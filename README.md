@@ -17,6 +17,12 @@ Easily import the library by cdn or as ES module.
 import 'maju-ui'; // this will import the css file from dist folder
 ```
 
+Or you can just import the `scss` file you need
+
+```js
+import 'maju-ui/scss/maju-grid.scss';
+```
+
 ## Documentation
 
 You can reference to [Docs Here](https://johnnywang1994.github.io/maju-ui)
