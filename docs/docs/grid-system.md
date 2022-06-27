@@ -5,7 +5,8 @@ Maju UI inspired by Bootstrap with 12 cols grid system.
 <style>
   .container-demo-1 .col,
   .container-demo-2 [class*='col-'],
-  .container-demo-4 .col {
+  .container-demo-4 .col,
+  .container-demo-5 * {
     border: 1px solid;
     text-align: center;
     padding: 10px 0;
@@ -206,3 +207,101 @@ and also with the breakpoint system
   </div>
 </div>
 ```
+
+
+## CSS Grid Layout
+you can use `grid-cols-{number}` to easily define col number for css grid layout as following
+
+### format
+`grid-cols-{number}`, `grid-rows-{number}`
+
+### Example
+
+<div class="container">
+  <div class="d-grid grid-cols-4 container-demo-5">
+    <div>
+      Grid Column 1
+    </div>
+    <div>
+      Grid Column 2
+    </div>
+    <div>
+      Grid Column 3
+    </div>
+    <div>
+      Grid Column 4
+    </div>
+  </div>
+</div>
+
+```html
+<div class="container">
+  <div class="d-grid grid-cols-4">
+    <div>
+      Grid Column 1
+    </div>
+    <div>
+      Grid Column 2
+    </div>
+    <div>
+      Grid Column 3
+    </div>
+    <div>
+      Grid Column 4
+    </div>
+  </div>
+</div>
+```
+
+with `colspan`, `rowspan` just like what table does
+
+### format
+`col-span-{number}`, `row-span-{number}`
+
+### Example
+<div class="container">
+  <div class="d-grid grid-cols-4 container-demo-5">
+    <div class="col-span-2">
+      Column 1
+    </div>
+    <div class="row-span-2">
+      Column 2
+    </div>
+    <div>
+      Column 3
+    </div>
+    <div>
+      Column 4
+    </div>
+    <div>
+      Column 5
+    </div>
+    <div>
+      Column 6
+    </div>
+  </div>
+</div>
+
+
+and also with the breakpoint system
+
+### format
+`grid-cols-{breakpoint}-{number}`, `grid-rows-{breakpoint}-{number}`, `col-span-{breakpoint}-{number}`, `row-span-{breakpoint}-{number}`
+
+### Example
+<div class="container">
+  <div class="d-grid grid-cols-md-2 grid-cols-lg-4 container-demo-5">
+    <div>
+      Column 1
+    </div>
+    <div>
+      Column 2
+    </div>
+    <div>
+      Column 3
+    </div>
+    <div>
+      Column 4
+    </div>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+@use 'sass:math';
+
+@import '../config/variables.scss';
+@import '../config/mixins.scss';
+
+.grid-cols {
+  @for $i from 1 through $max-col {
+    &-#{$i} {
+      grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+    }
+  }
+  @each $query, $_ in $breakpoints {
+    @include use-breakpoint($query) {
+      @for $i from 1 through $max-col {
+        &-#{$query}-#{$i} {
+          grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+}
+
+.grid-rows {
+  $max-row: 6;
+  @for $i from 1 through $max-row {
+    &-#{$i} {
+      grid-template-rows: repeat(#{$i}, minmax(0, 1fr));
+    }
+  }
+  @each $query, $_ in $breakpoints {
+    @include use-breakpoint($query) {
+      @for $i from 1 through $max-row {
+        &-#{$query}-#{$i} {
+          grid-template-rows: repeat(#{$i}, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+}
+
+.col-span {
+  @for $i from 1 through $max-col {
+    &-#{$i} {
+      grid-column: span $i / span $i;
+    }
+  }
+  @each $query, $_ in $breakpoints {
+    @include use-breakpoint($query) {
+      @for $i from 1 through $max-col {
+        &-#{$query}-#{$i} {
+          grid-column: span $i / span $i;
+        }
+      }
+    }
+  }
+}
+
+.row-span {
+  @for $i from 1 through $max-row {
+    &-#{$i} {
+      grid-row: span $i / span $i;
+    }
+  }
+  @each $query, $_ in $breakpoints {
+    @include use-breakpoint($query) {
+      @for $i from 1 through $max-row {
+        &-#{$query}-#{$i} {
+          grid-row: span $i / span $i;
+        }
+      }
+    }
+  }
+}
+
+.grid-cols-none {
+  grid-template-columns: none;
+}
+
+.col-span-full {
+  grid-column: 1 / -1;
+}
+
+.grid-rows-none {
+  grid-template-rows: none;
+}
+
+.row-span-full {
+  grid-row: 1 / -1;
+}

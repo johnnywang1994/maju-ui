@@ -32,6 +32,18 @@ $class-utils: (
     )),
     responsive: true
   ),
+  'justify-align-place': (
+    property: ('justify-content', 'align-content', 'place-content'),
+    class: ('justify-content', 'align-content', 'place-content'),
+    values: (
+      center: center,
+      start: flex-start,
+      end: flex-end,
+      between: space-between,
+      around: space-around,
+      evenly: space-evenly
+    )
+  ),
   // sizing
   'width': (
     property: 'width',
@@ -94,7 +106,7 @@ $class-utils: (
   'display': (
     property: 'display',
     class: 'd',
-    values: (none, flex, block, grid, table, inline-block, inline-flex, inline, table-cell, table-row),
+    values: (none, flex, block, grid, table, inline-block, inline-flex, inline-grid, inline, table-cell, table-row),
     responsive: true
   ),
   // float
@@ -105,12 +117,12 @@ $class-utils: (
     responsive: true
   ),
   // interactions
-  "user-select": (
+  'user-select': (
     property: user-select,
     class: user-select,
     values: (all, auto, none)
   ),
-  "pointer-events": (
+  'pointer-events': (
     property: pointer-events,
     class: pe,
     values: (none, auto),

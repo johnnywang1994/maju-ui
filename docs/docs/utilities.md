@@ -2,6 +2,11 @@
 
 utility classes for layout adjusting.
 
+## Item Placement
+use these to manage item placement in grid or flexbox
+- format: `justify-content-{value}`, `align-content-{value}`, `place-content-{value}`
+- responsive: false
+- [Detail](./utilities/placement)
 
 ## Flex order
 use `order-{number}` or `order-first`, `order-last` to specify the flex item order

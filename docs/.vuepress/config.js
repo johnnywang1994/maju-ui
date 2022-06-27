@@ -68,6 +68,7 @@ module.exports = {
           title: 'Utilities',
           collapsable: true,
           children: [
+            'utilities/placement.md',
             'utilities/order.md',
             'utilities/display.md',
             'utilities/spacing.md',

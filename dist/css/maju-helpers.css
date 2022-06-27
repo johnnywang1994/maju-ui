@@ -130,13 +130,11 @@
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none;
-  /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 }
 .hide-scrollbar::-webkit-scrollbar {
-  display: none;
-  /* Chrome, Safari and Opera */
+  display: none; /* Chrome, Safari and Opera */
 }
 
 .ratio {
