@@ -1,6 +1,6 @@
 # Placement
 
-## justify-content, align-items, place-content
+## justify-content, align-content, place-content
 
 - responsive: false
 
