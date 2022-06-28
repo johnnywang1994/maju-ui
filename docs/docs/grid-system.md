@@ -305,3 +305,22 @@ and also with the breakpoint system
     </div>
   </div>
 </div>
+
+```html
+<div class="container">
+  <div class="d-grid grid-cols-md-2 grid-cols-lg-4">
+    <div>
+      Column 1
+    </div>
+    <div>
+      Column 2
+    </div>
+    <div>
+      Column 3
+    </div>
+    <div>
+      Column 4
+    </div>
+  </div>
+</div>
+```
