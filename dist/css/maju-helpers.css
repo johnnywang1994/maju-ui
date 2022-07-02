@@ -179,3 +179,8 @@
   z-index: 1;
   content: "";
 }
+
+.vrwd {
+  --maju-vrwd: 16;
+  font-size: calc((0.05vw + 0.05vh + 0.025vmin) * var(--maju-vrwd));
+}

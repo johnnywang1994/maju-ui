@@ -4659,6 +4659,11 @@
   content: "";
 }
 
+.vrwd {
+  --maju-vrwd: 16;
+  font-size: calc((0.05vw + 0.05vh + 0.025vmin) * var(--maju-vrwd));
+}
+
 .text-gradient {
   color: transparent;
   background-image: linear-gradient(var(--maju-text-gradient));

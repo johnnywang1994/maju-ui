@@ -88,6 +88,7 @@ module.exports = {
             'helpers/scrollbar.md',
             'helpers/stretched-link.md',
             'helpers/action.md',
+            'helpers/vrwd.md'
           ]
         },
         {
