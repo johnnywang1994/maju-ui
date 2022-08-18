@@ -282,6 +282,31 @@ with `colspan`, `rowspan` just like what table does
   </div>
 </div>
 
+```html
+<div class="container">
+  <div class="d-grid grid-cols-4">
+    <div class="col-span-2">
+      Column 1
+    </div>
+    <div class="row-span-2">
+      Column 2
+    </div>
+    <div>
+      Column 3
+    </div>
+    <div>
+      Column 4
+    </div>
+    <div>
+      Column 5
+    </div>
+    <div>
+      Column 6
+    </div>
+  </div>
+</div>
+```
+
 
 and also with the breakpoint system
 
