@@ -1,7 +1,7 @@
 {
   "name": "maju-ui",
   "author": "johnnywang",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "license": "MIT",
