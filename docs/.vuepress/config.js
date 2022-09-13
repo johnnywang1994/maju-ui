@@ -62,6 +62,7 @@ module.exports = {
           children: [
             'container.md',
             'grid-system.md',
+            'position.md',
           ]
         },
         {

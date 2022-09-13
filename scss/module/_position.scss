@@ -1,0 +1,20 @@
+@import '../config/variables.scss';
+@import '../config/mixins.scss';
+
+$positions: (static, relative, absolute, fixed, sticky);
+
+@each $position in $positions {
+  .#{$position} {
+    position: $position;
+  }
+}
+
+@each $query, $_ in $breakpoints {
+  @include use-breakpoint($query) {
+    @each $position in $positions {
+      .#{$position}-#{$query} {
+        position: $position;
+      }
+    }
+  }
+}
